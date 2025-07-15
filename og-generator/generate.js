@@ -34,7 +34,7 @@ const outputDir = path.join(__dirname, '../og-images');
 if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir);
 
 (async () => {
-  const browser = await puppeteer.launch({ headless: false }); // Run with visible browser
+  const browser = await puppeteer.launch({ headless: true }); // Run with visible browser
 
   for (let i = 0; i < kurals.length; i++) {
     const kural = kurals[i];
