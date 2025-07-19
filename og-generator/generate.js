@@ -60,6 +60,7 @@ if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir);
     console.log(`✅ Generated OG image for Kural ${id}`);
     await page.close();
     // fs.writeFileSync(`debug-kural-${id}.html`, rawHtml);
+    // break;
   }
 
   await browser.close();

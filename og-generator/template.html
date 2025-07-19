@@ -12,7 +12,8 @@
       border:10px solid #007ac9;
       
       background-color: #fff;
-      padding: 40px;
+      padding-top: 40px;
+      padding-left: 40px;
       position: relative;
       box-sizing: border-box;
       background-image: url("__BACKGROUND_PATH__"); /* Background image */      
@@ -29,39 +30,55 @@
 }
 
     .kural {
-    font-size: 42px;
+    font-size: 38px;
     line-height: 1.6;
     font-weight: 500;
+    margin-bottom: 42px;
 }
 
     .info {
       font-size: 24px;
       margin-top: 15px;
     }
-    .valluvar {
-        margin: auto;
-      position: absolute;
-      left: 0;
-      right: 0;
-      display: table;
-      bottom: 0;
+    .valluvar {       
       width: 230px;
+      position: relative;
+      height: 100%;      
     }
      .valluvar img {
       width: 100%;
       height: auto;
       fill:#007ac9 !important;
+      position: absolute;
+      bottom: 0;
+    }
+    .total-cont {
+      display: flex;
+      justify-content: space-between;
+      align-items: top;
+      height: 100%;
+    }
+    .right-col{
+      width: calc(100% - 250px);
     }
   </style>
 </head>
-<body>
-  <img src="__LOGO_PATH__" alt="Thirukkural.ai Logo"    class="logo">
-
-  <div class="kural">__KURAL__</div>
-  <div class="info" id="adhigaram">அதிகாரம்: __ADHIGARAM__</div>
-  <div class="info" id="number">குறள் எண்: __ID__</div>
-  <div class="valluvar" id="valluvar">
-    <img src="__VALLUVAR_PATH__" alt="Thiruvalluvar pic" />
+<body>  
+  <div class="total-cont">
+    <div class="valluvar left-col" id="valluvar">
+      <!-- <img src="valluvar.svg" alt="Thiruvalluvar pic" /> -->
+      <img src="__VALLUVAR_PATH__" alt="Thiruvalluvar pic" />
+    </div>
+    <div class="right-col">
+      <!-- <img src="logo.png" alt="Thirukkural.ai Logo" class="logo"> -->
+      <img src="__LOGO_PATH__" alt="Thirukkural.ai Logo"    class="logo">
+      <!-- <div class="kural">அகர முதல எழுத்தெல்லாம் ஆதி<br>பகவன் முதற்றே உலகு.</div> -->
+      <div class="kural">__KURAL__</div>
+      <!-- <div class="info" id="adhigaram">அதிகாரம்: கடவுள் வாழ்த்து</div>
+      <div class="info" id="number">குறள் எண்: 1330</div> -->
+      <div class="info" id="adhigaram">அதிகாரம்: __ADHIGARAM__</div>
+    <div class="info" id="number">குறள் எண்: __ID__</div>
+    </div>
   </div>
 </body>
 </html>
